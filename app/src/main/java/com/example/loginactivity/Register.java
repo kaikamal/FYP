@@ -35,7 +35,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class Register extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity2.class.getSimpleName();
     EditText mEmail, mPassword, mConfirmPassword;
     Button mRegisterBtn;
     TextView mLoginBtn;
@@ -139,7 +139,7 @@ public class Register extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MainActivity2.class));
 
                     } else {
                         Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -154,7 +154,7 @@ public class Register extends AppCompatActivity {
                 final String getFullName = account.getDisplayName();
                 final String getEmail = account.getEmail();
 //                final String getPhotoUrl = account.getPhotoUrl();
-                startActivity(new Intent(Register.this, MainActivity.class));
+                startActivity(new Intent(Register.this, MainActivity2.class));
                 finish();
             }catch (ApiException e){
 //                Toast.makeText(this, Toast.LENGTH_SHORT).show();
