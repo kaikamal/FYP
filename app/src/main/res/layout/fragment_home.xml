@@ -108,18 +108,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daily Generation"
-                android:textSize="18sp"
-                android:textColor="#673AB7"/>
+                android:textColor="#673AB7"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewDailyGenerationValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1500 kWh"
-                android:textSize="24sp"
-                android:textColor="#000000"
                 android:layout_below="@id/textViewDailyGenerationTitle"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:text="1500 kWh"
+                android:textColor="#000000"
+                android:textSize="24sp" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
