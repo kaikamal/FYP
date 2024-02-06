@@ -38,18 +38,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Current Consumption"
-                android:textSize="18sp"
-                android:textColor="#673AB7"/>
+                android:textColor="#673AB7"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textViewCurrentConsumptionValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120 kWh"
-                android:textSize="24sp"
-                android:textColor="#000000"
                 android:layout_below="@id/textViewCurrentConsumptionTitle"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:text="120 kWh"
+                android:textColor="#000000"
+                android:textSize="24sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -132,10 +132,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="582dp"
-        android:layout_marginEnd="149dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="597dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginBottom="98dp"
         android:onClick="onClickLogout"
         android:text="LOGOUT"
         app:layout_constraintBottom_toBottomOf="parent"
