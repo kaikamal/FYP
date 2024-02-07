@@ -12,11 +12,11 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Solar Dashboard"
-        android:textSize="24sp"
-        android:textColor="#673AB7"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:text=" Dashboard"
+        android:textColor="#673AB7"
+        android:textSize="24sp" />
 
     <!-- Current Energy Consumption Card -->
     <androidx.cardview.widget.CardView
