@@ -15,30 +15,30 @@
 
     <!-- Sample Notification Item Layout -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_centerInParent="true"
         android:background="@color/purple"
-        android:layout_centerInParent="true">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewNotificationTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="System Message"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF"/>
+        <TextView
+            android:id="@+id/textViewNotificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="System Message"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textViewNotificationContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to the Smart Solar Tracking System. Enjoy efficient energy management!"
-        android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/textViewNotificationContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Welcome to the Smart Solar Tracking System. Enjoy efficient energy management!"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
 
-</LinearLayout>
+    </LinearLayout>
 
     </RelativeLayout>
