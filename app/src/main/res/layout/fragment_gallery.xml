@@ -32,8 +32,8 @@
 
         <TextView
             android:id="@+id/textViewNotificationContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="348dp"
+            android:layout_height="59dp"
             android:layout_marginTop="8dp"
             android:text="Welcome to the Smart Solar Tracking System. Enjoy efficient energy management!"
             android:textColor="#FFFFFF"
