@@ -8,3 +8,8 @@
 ### Programming languages:
 &#x2611; Java <br />
 &#x2611; C/C++
+
+
+### Frameworks:
+&#x2611; Android Jetpack <br />
+&#x2611; Arduino Framework 
