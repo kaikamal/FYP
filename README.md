@@ -6,5 +6,5 @@
 &#x2611; Popularize the use of alternative energy recources <br />
 
 ### Programming languages:
-&#x2611; Java
+&#x2611; Java <br />
 &#x2611; C/C++
