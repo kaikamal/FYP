@@ -12,4 +12,4 @@
 
 ### Frameworks:
 &#x2611; Android Jetpack <br />
-&#x2611; Arduino Frame 
+&#x2611; Arduino Framework
