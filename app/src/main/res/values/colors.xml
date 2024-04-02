@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="purple">#673AB7</color>
+    <color name="lavender">#6792F7</color>
+    <color name= "darkGrey"> #ff424242</color>
 </resources>
