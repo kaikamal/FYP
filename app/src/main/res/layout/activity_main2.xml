@@ -8,12 +8,32 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include
-        android:id="@+id/app_bar_main2"
-        layout="@layout/app_bar_main2"
+    <!-- Main content -->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
+        <!-- Include your main content here -->
+        <include
+            android:id="@+id/app_bar_main2"
+            layout="@layout/app_bar_main2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Switch widget -->
+        <Switch
+            android:id="@+id/themeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"/>
+
+    </RelativeLayout>
+
+    <!-- Navigation drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -22,4 +42,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main2"
         app:menu="@menu/activity_main_drawer" />
+
 </androidx.drawerlayout.widget.DrawerLayout>
