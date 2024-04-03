@@ -22,7 +22,8 @@
             <size
                 android:height="8dp"/>
             <corners
-                android:radius="100dp"/>
+                android:radius="100dp"
+                />
         </shape>
     </item>
 </selector>
