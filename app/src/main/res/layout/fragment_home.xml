@@ -91,12 +91,12 @@
     <!-- Daily Energy Generation Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardDailyGeneration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="99dp"
         android:layout_below="@id/cardEnergyConsumed"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -122,8 +122,8 @@
                 android:textSize="24sp" />
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
 
+    </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/button3"
         android:layout_width="139dp"
@@ -136,7 +136,7 @@
         android:layout_marginTop="616dp"
         android:layout_marginEnd="153dp"
         android:layout_marginBottom="110dp"
-        android:onClick="onClickLogout"
+        android:onClick="onClick"
         android:text="LOGOUT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,5 +144,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.654" />
+
 
 </RelativeLayout>

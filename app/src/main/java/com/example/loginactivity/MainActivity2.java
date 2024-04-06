@@ -1,8 +1,10 @@
 package com.example.loginactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
@@ -10,6 +12,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,16 +21,30 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.loginactivity.databinding.ActivityMain2Binding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMain2Binding binding;
+//    private Switch lightNightSwitch;
+//    private boolean isNightMode = false;
+    private Switch themeSwitch;
+    private Button logout_button;
 
 
-    @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main2);
+//        lightNightSwitch = findViewById(R.id.themeSwitch);
+//        lightNightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                toggleTheme(isChecked);
+//            }
+//        });
 //        Switch themeSwitch = findViewById(R.id.themeSwitch);
 //        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 //            @Override
@@ -40,6 +57,9 @@ public class MainActivity2 extends AppCompatActivity {
 //                recreate(); // Recreate the activity to apply the selected theme
 //            }
 //        });
+
+//        logout_button = findViewById(R.id.button3);
+
 
 
 
@@ -66,6 +86,21 @@ public class MainActivity2 extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        themeSwitch = findViewById(R.id.themeSwitch);
+        themeSwitch.setChecked(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES);
+        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+                recreate();
+            }
+        });
+
 
 
     }
@@ -83,4 +118,19 @@ public class MainActivity2 extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+//    private void toggleTheme(boolean isNight){
+//        isNightMode = isNight;
+//        if (isNight){
+//            getTheme().applyStyle(R.style.NightTheme, true);}
+//        else {
+//            getTheme().applyStyle(R.style.LightTheme, true);
+//        }
+//    }
+
+//    public void onClickLogout(View view){
+//        FirebaseAuth.getInstance().signOut();
+//        startActivity(new Intent(getApplicationContext(), Login.class));
+//        finish();
+//    }
+
 }

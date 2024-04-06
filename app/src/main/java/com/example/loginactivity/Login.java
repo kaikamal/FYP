@@ -8,6 +8,7 @@ import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -76,6 +77,10 @@ public class Login extends AppCompatActivity {
             mEmail.setError("Email is required!");
             return;
         }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            mEmail.setError("Please enter a valid email address!");
+            return;
+        }
         if(TextUtils.isEmpty(password)){
             mPassword.setError("Password is required!");
             return;
@@ -92,10 +97,9 @@ public class Login extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(Login.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), MainActivity2.class));
-
+                    finish();
                 }else{
                     Toast.makeText(Login.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.GONE);
                     progressBar.setVisibility(View.GONE);
                 }
             }

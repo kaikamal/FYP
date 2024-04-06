@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -120,6 +121,9 @@ public class Register extends AppCompatActivity {
             mEmail.setError("Email is required!");
             return;
         }
+        if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            mEmail.setError("Enter a valid email address!");
+        }
         if (TextUtils.isEmpty(password)) {
             mPassword.setError("Password is required!");
             return;
@@ -142,7 +146,14 @@ public class Register extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), MainActivity2.class));
 
                     } else {
-                        Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        String errorMessage = task.getException().getMessage();
+                        if(errorMessage.contains("email address is already in use")){
+                            mEmail.setError("Email is already in use!");
+                        }
+                        else{
+                            Toast.makeText(Register.this, "Error: "+ errorMessage, Toast.LENGTH_SHORT).show();
+                        }
+//                        Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                     }
                 }
