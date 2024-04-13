@@ -105,5 +105,33 @@ public class Login extends AppCompatActivity {
             }
         });
         }
+    public void onClickForgotPassword(View view) {
+        String email = mEmail.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            mEmail.setError("Email is required!");
+            return;
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            mEmail.setError("Please enter a valid email address!");
+            return;
+        }
+
+        progressBar.setVisibility(View.VISIBLE);
+
+        fAuth.sendPasswordResetEmail(email)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        progressBar.setVisibility(View.GONE);
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Login.this, "Password reset email sent.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Login.this, "Failed to send password reset email.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
+
+}
 
