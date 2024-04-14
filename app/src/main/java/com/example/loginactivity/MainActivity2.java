@@ -63,8 +63,10 @@ public class MainActivity2 extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    getTheme().applyStyle(R.style.Theme_LoginActivity_Dark, true);
                 } else {
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    getTheme().applyStyle(R.style.Theme_LoginActivity_Light, true);
                 }
                 recreate();
             }

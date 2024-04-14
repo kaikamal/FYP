@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.LoginActivity" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.LoginActivity" parent="Base.Theme.LoginActivity" />
@@ -16,22 +16,26 @@
 
     <style name="Theme.LoginActivity.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="ScreenBackground"><item name="android:background">@color/white</item></style>
-
     <style name="CardBackground"><item name="android:background">@color/white</item></style>
-    <style name="TextColor"><item name="android:textColor">@color/lavender</item></style>
-<!--    <style name="ImageChange"><item name="android:background">@color/white</item></style>-->
-<!--    <style name="LightTheme" parent="Theme.AppCompat.Light">-->
 
-<!--    </style>-->
-<!--    <style name="NightTheme" parent="Theme.AppCompat.DayNight">-->
+    <!-- Text color styles -->
+    <style name="TextColor">
+        <item name="android:textColor">@color/lavender</item>
+    </style>
+    <style name="TextColor.Dark">
+        <item name="android:textColor">@color/white</item>
+    </style>
 
-<!--    </style>-->
+    <!-- Light theme -->
+    <style name="Theme.LoginActivity.Light" parent="Base.Theme.LoginActivity">
+        <!-- Customize your light theme here. -->
+        <item name="android:textColor">@color/lavender</item>
+    </style>
 
+    <!-- Dark theme -->
+    <style name="Theme.LoginActivity.Dark" parent="Base.Theme.LoginActivity">
+        <!-- Customize your dark theme here. -->
+        <item name="android:textColor">@color/white</item>
+    </style>
 
-        <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        </style>
-        <style name="AppTheme.Dark" parent="Theme.AppCompat">
-            <item name="android:windowBackground">@color/darkGrey</item>
-            <item name="android:textColor"> @color/white</item>
-        </style>
 </resources>
