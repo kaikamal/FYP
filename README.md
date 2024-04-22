@@ -12,6 +12,6 @@
 
 ### Frameworks:
 &#x2611; Android Jetpack <br />
-&#x2611; Arduino Frasmework
+&#x2611; Arduino Framework
 
 
