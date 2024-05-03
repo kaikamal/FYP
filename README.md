@@ -15,7 +15,7 @@
 &#x2611; Arduino Framework
 
 ### Development tools:
-&#x2611; Arduino IDE 2.2.1
+&#x2611; Arduino IDE 2.2.1 <br />
 &#x2611; Android Studio Giraffe 2022.3.1
 
 
