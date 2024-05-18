@@ -7,7 +7,7 @@
 
 ### Programming languages:
 &#x2611; Java <br />
-&#x2611; C/C++
+&#x2611; C
 
 
 ### Frameworks:
